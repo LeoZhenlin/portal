@@ -90,8 +90,8 @@ public class WxServiceImpl implements WxService {
 					this.userDao.save(user);
 
 				} else if (!eventType.equals("unsubscribe")) {
-
-					eventType.equals("CLICK");
+					userDao.delete(userDao.get(Tuser.class, fromUserName));
+//					eventType.equals("CLICK");
 				}
 			}
 

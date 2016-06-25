@@ -189,6 +189,11 @@
 			<artifactId>configuration</artifactId>
 			<version>1.6</version>
 		</dependency>
+		<dependency>
+			<groupId>org.sitemesh</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>protal</finalName>

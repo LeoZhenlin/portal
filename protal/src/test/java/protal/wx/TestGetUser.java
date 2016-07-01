@@ -4,19 +4,16 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
 
+import org.guokewest.platform.common.util.PropertiesUtils;
+import org.guokewest.platform.system.model.Tuser;
+import org.guokewest.platform.system.util.MD5Util;
+import org.guokewest.wx.model.accessToken.Token;
+import org.guokewest.wx.model.user.WxUser;
+import org.guokewest.wx.util.CommonUtil;
 import org.junit.Test;
 import org.springframework.beans.BeanUtils;
 
 import com.google.gson.Gson;
-
-import common.util.PropertiesUtils;
-import system.model.Tuser;
-import system.util.MD5Util;
-import wx.model.accessToken.Token;
-import wx.model.user.WxUser;
-import wx.util.CommonUtil;
-import wx.util.QrcodeUtil;
-import wx.util.UserUtil;
 
 public class TestGetUser {
 	private static String tokenUrl;

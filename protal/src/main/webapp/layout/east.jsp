@@ -2,7 +2,7 @@
 <script type="text/javascript" charset="utf-8">
 	$(function() {
 
-		$('#layout_east_onlineDatagrid').datagrid({
+/* 		$('#layout_east_onlineDatagrid').datagrid({
 			url : '${pageContext.request.contextPath}/onlineController/datagrid.action',
 			title : '',
 			iconCls : '',
@@ -59,7 +59,7 @@
 			beforePageText : '',
 			afterPageText : '/{pages}',
 			displayMsg : ''
-		});
+		}); */
 
 		$('#layout_east_calendar').calendar({
 			fit : true,
@@ -89,9 +89,9 @@
 	<div data-options="region:'north',border:false" style="height:180px;overflow: hidden;">
 		<div id="layout_east_calendar"></div>
 	</div>
-	<div data-options="region:'center',border:false" style="overflow: hidden;">
+	<!-- <div data-options="region:'center',border:false" style="overflow: hidden;">
 		<div id="layout_east_onlinePanel" data-options="fit:true,border:false" title="用户在线列表">
 			<table id="layout_east_onlineDatagrid"></table>
 		</div>
-	</div>
+	</div> -->
 </div>

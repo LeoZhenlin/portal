@@ -16,5 +16,4 @@
 	<task:scheduled-tasks>
 		<task:scheduled ref="initServiceImpl" method="init" cron="59 59 23 * * ?" />
 	</task:scheduled-tasks>
-
 </beans>

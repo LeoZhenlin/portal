@@ -13,14 +13,14 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
-	<context:component-scan base-package="*.controller" />
+	<context:component-scan base-package="org.guokewest" />
 
 	<!-- Spring MVC JSON配置 -->
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="messageConverters">
 			<list>
 				<!-- <bean id="fastJsonHttpMessageConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter"> -->
-				<bean id="fastJsonHttpMessageConverter" class="system.util.FastJsonHttpMessageConverter">
+				<bean id="fastJsonHttpMessageConverter" class="org.guokewest.platform.system.util.FastJsonHttpMessageConverter">
 					<property name="supportedMediaTypes">
 						<list>
 							<value>text/html;charset=UTF-8</value><!-- 避免IE出现下载JSON文件的情况 -->
@@ -41,7 +41,7 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="system.interceptors.SecurityInterceptor">
+			<bean class="org.guokewest.platform.system.interceptors.SecurityInterceptor">
 				<!-- 不需要权限验证的地址 -->
 				<property name="excludeUrls">
 					<list>
@@ -59,12 +59,10 @@
 						<value>/userController/editCurrentUserPwd</value><!-- 用户修改自己的密码 -->
 						<value>/userController/currentUserRolePage</value><!-- 查看自己的角色页面 -->
 						<value>/userController/currentUserResourcePage</value><!-- 查看自己的权限页面 -->
-						<value>/onlineController/datagrid.action</value><!-- 查看在线人数页面 -->
 						<value>/wxController/weixin</value>
 					</list>
 				</property>
 			</bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
-
 </beans>

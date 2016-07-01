@@ -23,7 +23,7 @@
 	</bean>
 
 	<!-- 自动扫描dao和service包(自动注入) -->
-	<context:component-scan base-package="*.dao,*.service" />
+	<context:component-scan base-package="org.guokewest" />
 	
-	<bean id="springContextHolder" class="common.util.spring.SpringContextHolder" />
+	<bean id="springContextHolder" class="org.guokewest.platform.common.util.spring.SpringContextHolder" />
 </beans>
